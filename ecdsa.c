@@ -543,7 +543,6 @@ void point_multiply(const ecdsa_curve *curve, const bignum256 *k,
 // k must be a normalized number with 0 <= k < curve->order
 void scalar_multiply(const ecdsa_curve *curve, const bignum256 *k,
                      curve_point *res) {
-  assert(bn_is_less(k, &curve->order));
 
   int i, j;
   static CONFIDENTIAL bignum256 a;
